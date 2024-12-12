@@ -9,7 +9,7 @@ Make easier to download and store your videos or mp3 files and listen to them in
 
 If you donate below, I will be able to work more and more happy on this project than if you do not, consider it:
 
-[Buy me a coffee ☕️](https://buymeacoffee.com/daniel_neocathedral)
+[🍵Buy me a coffee ☕️](https://buymeacoffee.com/daniel_neocathedral)
 
 
 ![alt text](https://i.imgur.com/HVBibaJ.png)
