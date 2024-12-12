@@ -45,7 +45,7 @@ chmod +x unc_dl.sh
 - Custom file naming
 - Error handling and success confirmation
 - Automatic iCloud sync for iOS device access
-- Random colors on each use. Good ol' times vibes.
+- Random colors on each use. Good ol' times vibes...
 
 ## Prerequisites
 
