@@ -2,18 +2,38 @@
 
 Unc_dl is a YouTube to MP3/MP4 Downloader CLI script-app. As every good Unc, we love saving time and money and having an offline storage of content to watch or listen.
 
-A bash script that downloads YouTube videos and converts them to either MP3 or MP4 format, saving them directly to your iCloud Drive's Podcasts folder. The script features an interactive interface with progress tracking and customizable quality settings.
+A bash script that downloads YouTube videos and converts them to either MP3 or MP4 format, saving them directly to your iCloud Drive's Unc_dl folder. The script features an interactive interface with progress tracking and customizable quality settings.
 
-So usefull to download and automaticaly store your videos or mp3 files and listen to them in you iPhone later. Providing a free feature of downloading YT videos/audio. Ideal for podcast listening.
+Make easier to download and store your videos or mp3 files and listen to them in you iPhone later, even offline. Ideal for podcasting.
+### ONLY AVAILABLE FOR macOS (for the moment)
 
-![alt text](https://i.imgur.com/hwd9gXY.png)
+If you donate below, I will be able to work more and more happy on this project than if you do not, consider it:
+
+<a href="https://buymeacoffee.com/daniel_neocathedral
+" style="font-size:large">Buy me a coffe ☕️</a>
+
+![alt text](https://i.imgur.com/HVBibaJ.png)
 
 
-### As simple as:
-![alt text](https://i.imgur.com/CyhJ5wH.png)
+### As simple as 👇👇👇
+![how to unc_dl](https://s7.gifyu.com/images/SJVy4.gif)
+Just like that! We have some songs ready to play on our phone.
 
-<i> <strong> LEGAL DISCLAIMER</strong>: I do not own anything downloaded through this pipeline, content and all rights belong to YouTube and Creators.</i>
+<strong style="color: red;">PLEASE, READ THE LEGAL DISCLAIMER AT THE END BEFORE USE.</strong>
 
+## Quick start (for developers):
+
+```bash
+# Add the repo to your local
+git clone https://github.com/F-N-LL/unc_dl.git
+
+# Make the script executable
+chmod +x unc_dl.sh
+
+# Use it, as above
+./unc_dl.sh
+
+```
 
 ## Features
 
@@ -25,6 +45,7 @@ So usefull to download and automaticaly store your videos or mp3 files and liste
 - Custom file naming
 - Error handling and success confirmation
 - Automatic iCloud sync for iOS device access
+- Random colors on each use. Good ol' times vibes.
 
 ## Prerequisites
 
@@ -35,12 +56,12 @@ So usefull to download and automaticaly store your videos or mp3 files and liste
 
 ## Installation Guide
 
-### 1. Install Homebrew (if not already installed)
+### 1.1 Install Homebrew (if not already installed)
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-### 2. Install yt-dlp
+### 1.2 Install yt-dlp
 Using Homebrew:
 ```bash
 brew install yt-dlp
@@ -51,40 +72,12 @@ Or using pip:
 pip3 install yt-dlp
 ```
 
-### 3. Install FFmpeg (required for audio conversion)
+### 1.3 Install FFmpeg (required for audio conversion)
 ```bash
 brew install ffmpeg
 ```
 
-### 4. Set up the Script
-
-1. Create a new directory for the script (optional):
-```bash
-mkdir ~/youtube-downloader
-cd ~/youtube-downloader
-```
-
-2. Create the script file:
-```bash
-touch youtube-downloader.sh
-```
-
-3. Copy the script content into the file using your preferred text editor
-```bash
-nano youtube-downloader.sh   # or use vim, VS Code, etc.
-```
-
-4. Make the script executable:
-```bash
-chmod +x youtube-downloader.sh
-```
-
-### 5. Create the Podcasts directory in iCloud Drive
-```bash
-mkdir -p "$HOME/Library/Mobile Documents/com~apple~CloudDocs/Podcasts"
-```
-
-### 6. Verify Installation
+### 1.4 Verify Installation
 
 Check if all components are installed correctly:
 ```bash
@@ -98,25 +91,25 @@ ffmpeg -version
 ls -l youtube-downloader.sh
 ```
 
-### Troubleshooting Common Installation Issues
+## 1. Set up the Unc_dl machine
 
-1. If Homebrew commands fail:
+1. Cloning the project
 ```bash
-# Reset Homebrew permissions
-sudo chown -R $(whoami) $(brew --prefix)/*
-```
+# Could be cloned straight into your Home directory or script folder. Either way, make sure you run the command in the same directory as the unc_dl.sh is.
 
-2. If yt-dlp is not found:
+mkdir scripts
+cd scripts
+
+# Add the repo to your local
+git clone https://github.com/F-N-LL/unc_dl.git
+```
+OPTIONAL: Straigh download the script from here: <a href="https://drive.google.com/file/d/1gal48uQtlD0OnYu57Dd3Yn6MylVp3mH0/view?usp=sharing">Download from Google Drive</a>
+
+2. Either way you will need to make the scritp executable to make it work:
 ```bash
-# Add to PATH if installed with pip
-export PATH="$PATH:$HOME/.local/bin"
+# Make the script executable
+chmod +x unc_dl1.sh
 ```
-
-3. If the script can't access iCloud Drive:
-- Ensure iCloud Drive is enabled in System Preferences
-- Check that you're signed in to your Apple ID
-- Verify the Podcasts folder exists in iCloud Drive
-
 ## Usage
 
 1. Run the script:
@@ -124,11 +117,11 @@ export PATH="$PATH:$HOME/.local/bin"
 ./unc_dl.sh
 ```
 
-2. Follow the interactive prompts:
-   - Enter the YouTube URL
+2. Follow the interactive prompts (mostly using numbers):
+   - Enter the YouTube URL (paste URL)
    - Select output format (MP3 or MP4)
    - Choose a filename
-   - For MP3 format, select bitrate quality
+   - For MP3 format, select bitrate qualit`
 
 ## MP3 Bitrate Options
 
@@ -138,13 +131,18 @@ export PATH="$PATH:$HOME/.local/bin"
 - 96k: Good quality
 - 128k: Standard quality (default)
 - 192k: High quality
-
+`
 ## Output Location
 
 Files are automatically saved to:
 ```
 ~/Library/Mobile Documents/com~apple~CloudDocs/Podcasts/
 ```
+
+💡 NOTE:  If the script can't access iCloud Drive:
+- Ensure iCloud Drive is enabled in System Preferences
+- Check that you're signed in to your Apple ID
+- Verify the Podcasts folder exists in iCloud Drive
 
 ## Success Indicators
 
@@ -169,12 +167,27 @@ The script includes basic error checking for:
 - Keep yt-dlp updated regularly: `brew upgrade yt-dlp` or `pip3 install -U yt-dlp`
 
 ## License
+MIT License
 
-[Add your license information here]
+Copyright (c) [YEAR] [YOUR FULL NAME OR GITHUB USERNAME]
 
-## Contributing
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-[Add contribution guidelines if applicable]
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 
 ## Support
 
@@ -184,4 +197,42 @@ For installation issues:
 - Ensure iCloud Drive is properly configured
 - Update all components to their latest versions
 
-[Add additional support information or contact details]
+
+## ⚠️ Legal Disclaimer
+
+**IMPORTANT: By using this script, you agree to the following terms:**
+
+1. This script is intended for personal, non-commercial use only.
+
+2. Users are solely responsible for ensuring they have the legal right to download and use any content from YouTube.
+
+3. The script is provided "as is" without warranty of any kind. Use at your own risk.
+
+4. Downloading copyrighted content without permission may violate:
+   - YouTube's Terms of Service
+   - Copyright laws
+   - Intellectual property rights
+
+5. Content creators and copyright holders retain all rights to their original work.
+
+6. Users must:
+   - Respect copyright laws
+   - Obtain necessary permissions before downloading
+   - Use downloaded content only for fair use purposes
+   - Not redistribute or monetize downloaded content
+
+7. This script is not affiliated with, endorsed by, or directly associated with YouTube or Google.
+
+**By using this script, you acknowledge and agree to comply with all applicable laws and platform policies.**
+
+## Usage Warning
+
+- Downloading videos may be against YouTube's Terms of Service
+- Always respect intellectual property rights
+- Consider using official methods to access content
+
+## Recommended Alternatives
+
+- YouTube Premium
+- Official download options provided by content creators
+- Streaming services
