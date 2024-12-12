@@ -1,6 +1,6 @@
 # Unc_dl
 
-Unc_dl is a YouTube to MP3/MP4 Downloader CLI script-app. As every good Unc we like to saving time and money and having an offline storage of content to watch or listen.
+Unc_dl is a YouTube to MP3/MP4 Downloader CLI script-app. As every good Unc, we love saving time and money and having an offline storage of content to watch or listen.
 
 A bash script that downloads YouTube videos and converts them to either MP3 or MP4 format, saving them directly to your iCloud Drive's Podcasts folder. The script features an interactive interface with progress tracking and customizable quality settings.
 
