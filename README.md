@@ -10,7 +10,7 @@ So usefull to download and automaticaly store your videos or mp3 files and liste
 <i> <strong> LEGAL DISCLAIMER</strong>: I do not own anything downloaded through this pipeline, content and all rights belong to YouTube and Creators.</i>
 
 
-<i> <strong> MP4 VIDEO DL update</strong>: mp4 is still not available yet, will be soon.</i>
+<i> <strong> MP4 VIDEO DL update</strong>: mp4 is not available yet, will be soon.</i>
 
 ## Features
 
