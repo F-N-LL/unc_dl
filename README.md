@@ -10,7 +10,7 @@ Make easier to download and store your videos or mp3 files and listen to them in
 If you donate below, I will be able to work more and more happy on this project than if you do not, consider it:
 
 <a href="https://buymeacoffee.com/daniel_neocathedral
-" style="font-size:large">Buy me a coffe ☕️</a>
+" style="font-size:large" target="_blank">Buy me a coffe ☕️</a>
 
 ![alt text](https://i.imgur.com/HVBibaJ.png)
 
@@ -103,7 +103,7 @@ cd scripts
 # Add the repo to your local
 git clone https://github.com/F-N-LL/unc_dl.git
 ```
-OPTIONAL: Straigh download the script from here: <a href="https://drive.google.com/file/d/1gal48uQtlD0OnYu57Dd3Yn6MylVp3mH0/view?usp=sharing">Download from Google Drive</a>
+OPTIONAL: Straigh download the script from here: <a href="https://drive.google.com/file/d/1gal48uQtlD0OnYu57Dd3Yn6MylVp3mH0/view?usp=sharing" target="_blank">Download from Google Drive</a>
 
 2. Either way you will need to make the scritp executable to make it work:
 ```bash
