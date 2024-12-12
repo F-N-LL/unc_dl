@@ -52,8 +52,22 @@ esac
 # Prompt for the output file name (without extension)
 read -p "Output file name (without extension): " BASE_NAME
 
+ DESTINATION="$HOME/Library/Mobile Documents/com~apple~CloudDocs/Podcasts/"
+
 # Set the destination directory in iCloud Drive
-DESTINATION="$HOME/Library/Mobile Documents/com~apple~CloudDocs/Podcasts/"
+DESTINATION="$HOME/Library/Mobile Documents/com~apple~CloudDocs/unc_dl/"
+
+# Check if directory exists, if not create it
+if [ ! -d "$DESTINATION" ]; then
+    mkdir -p "$DESTINATION"
+    if [ $? -ne 0 ]; then
+        printf "\nError: Could not create directory $DESTINATION\n"
+        printf "Please check if iCloud Drive is enabled and you have proper permissions.\n\n"
+        exit 1
+    fi
+    printf "\nCreated directory: $DESTINATION\n"
+fi
+
 FILE="${DESTINATION}${BASE_NAME}.$FORMAT"
 
 # Check the output format (only mp3 or mp4 for now)
@@ -105,7 +119,7 @@ if [ ! -f "$FILE" ]; then
 fi
 
 # Success message with emojis
-printf "\n\nFile downloaded successfully at $FILE\n"
-printf "🎉 The file is now available in iCloud Drive and should be accessible from your iPhone. 📱\n"
+printf "\n\nFile downloaded successfully at $FILE\n\n\n"
+printf "🎉 The file is now available in iCloud Drive and should be accessible from your iPhone 📱\n\n"
 printf "✅ Script completed successfully! Have a great day! 😊\n\n"
 
