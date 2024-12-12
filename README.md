@@ -19,7 +19,7 @@ If you donate below, I will be able to work more and more happy on this project 
 ![how to unc_dl](https://s7.gifyu.com/images/SJVy4.gif)
 Just like that! We have some songs ready to play on our phone.
 
-<strong style="color: red;">PLEASE, READ THE LEGAL DISCLAIMER AT THE END BEFORE USE.</strong>
+🔴🔴🔴 PLEASE, READ THE LEGAL DISCLAIMER AT THE END BEFORE USE.🔴🔴🔴
 
 ## Quick start (for developers):
 
