@@ -208,8 +208,8 @@ if [ "$FORMAT" == "mp3" ]; then
 else
     # MP4 download configuration
     current_stage=""
-    
-    yt-dlp --newline --progress -f 'bestvideo[vcodec=avc]+bestaudio[acodec=aac]/best[vcodec=avc][acodec=aac]' -o "$FILE" "$URL" 2>&1 | \
+
+    yt-dlp --newline --progress -f 'best[ext=mp4]' -o "$FILE" "$URL" 2>&1 | \
     while IFS= read -r line; do
         if [[ $line =~ "youtube" ]] || [[ $line =~ "info" ]]; then
             print_base "$line\n"
