@@ -209,7 +209,7 @@ else
     # MP4 download configuration
     current_stage=""
     
-    yt-dlp --newline --progress -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' -o "$FILE" "$URL" 2>&1 | \
+    yt-dlp --newline --progress -f 'bestvideo[vcodec=avc]+bestaudio[acodec=aac]/best[vcodec=avc][acodec=aac]' -o "$FILE" "$URL" 2>&1 | \
     while IFS= read -r line; do
         if [[ $line =~ "youtube" ]] || [[ $line =~ "info" ]]; then
             print_base "$line\n"
